@@ -16,7 +16,7 @@ public:
     }
     //getter
     string getName(){
-      return Name;        //we cannot access Name bcz it is hidden in private, so we can access name through getName bcz getName is public
+      return Name;        //we cannot access Name bcz it is hidden in private, so we can access name through method getName bcz getName method is in public
     }
 
     void setCompany(string company){
