@@ -111,11 +111,11 @@ int main(){
     Teacher t= Teacher("Jack","SRM IST",35,"History");
 
     //d.Work();
-    //t.Work();
+    //t.Work();  base class Employee and deriveed in different class like developer, teacher. We can perform more fuction by deriving more classes from same base class
       
          //or
 
-   //making base class Employee to derive class two objects(developer, teacher)
+   //making base class Employee(as a ponter) to derive class two objects(developer, teacher)
     Employee* e1 = &d;  // to run this ponter we have to change the function into virtual void Work function
     Employee* e2 = &t;
 
@@ -136,6 +136,9 @@ int main(){
 
 
 //2nd example
+
+//For example, think of a base class called Animal that has a method called animalSound(). Derived 
+//classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):
 
 // Base class
 class Animal {
