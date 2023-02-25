@@ -56,7 +56,8 @@ int main(){
 
     Employee employee2 = Employee("John","dj company",30); //Sending the parameter to Employee constructor
     employee2.Indtroduceyourself();
-
+    
+    //used .setAge to access age hidden in private
     employee1.setAge(39); //if we input less than 18 , then it is ivalid , so it shows previous declared age which is 25
     //this .setAge(39) is written to input new age , if it is nit written then previous declared age will display
     std::cout<<employee1.getName()<< " is "<<employee1.getAge() << " years old"<<'\n';
