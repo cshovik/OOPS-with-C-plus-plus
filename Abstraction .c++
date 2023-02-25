@@ -2,6 +2,7 @@
 #include <iostream>
 #include<cmath>
 using std::string;
+//Objects in an OOP language provide an abstraction that hides the internal implementation details
 
 class AbstractEmployee {
     virtual void AskforPromotion()=0;//abstract function
