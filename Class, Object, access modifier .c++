@@ -13,15 +13,19 @@ using std::string;
 
 //class-  A class is a user-defined type that describes what a certain type of object will look like. A class description consists of a declaration and a definition. Usually these pieces are split into separate files.
 
-An object is a single instance of a class. You can create many objects from the same class type.
+//An object is a single instance of a class. You can create many objects from the same class type.
+
+//Attributes -Any variable that is bound in a class is a class attribute
+//Method- Any function defined within a class is a method
 
 class Employee {
 public: //access modifier
+    //class attributes
     string name; //members of this class is is its attribute and behaviour
     string company;
     int age;
 
-    void Indtroduceyourself(){
+    void Indtroduceyourself(){ //method
       std::cout<< "Name " <<name <<'\n';
       std::cout<< "company " << company << '\n';
       std::cout<< "Age " << age << '\n';
@@ -32,7 +36,7 @@ int main(){
     
     Employee employee1;
     employee1.name = "Shovik"; 
-    employee1.company = "YT.CodeBeauty";
+    employee1.company = "YT.CodeBeauty"; //reference the class
     employee1.age = 25;
     employee1.Indtroduceyourself();
     //employee1.Indtroduceyourself();  it will introduce 2 times
