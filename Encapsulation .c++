@@ -41,7 +41,7 @@ public:
     }
 
     Employee(string name,string company, int age){ 
-       Name = name;
+       Name = name;                                  //construction
        Company = company;
        Age = age;
     }
