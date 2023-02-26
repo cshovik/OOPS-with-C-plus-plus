@@ -48,3 +48,118 @@ int main(){
   
 
 }
+
+
+
+// Type -copy constructor
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class Samplecopyconstructor
+{
+  private:
+  int x, y;  //data member
+
+  public:
+  //constructor
+  Samplecopyconstructor(int x1, int y1){
+    x = x1;
+    y = y1;       
+  }
+  
+  //copy constructor
+   Samplecopyconstructor(const Samplecopyconstructor &sam){
+    x = sam.x;
+    y= sam.y;
+
+   }
+
+   //method
+   void display(){
+    cout << x << " "<<y<<'\n';
+   }
+
+
+};
+
+//main function
+int main(){
+  Samplecopyconstructor obj1(10,15); //normal constructor
+  Samplecopyconstructor obj2 = obj1;  //copy constructor
+  Samplecopyconstructor obj3(obj1);   // method 2- copy constructor
+  
+  cout<<"Normal Constructor :";
+  obj1.display();
+  cout<<"Copy constructor :";
+  obj2.display();
+  cout<<"Copy constructor :";
+  obj3.display();
+
+
+  return 0;
+
+
+}
+
+/*
+output:
+Normal Constructor :10 15
+Copy constructor :10 15
+Copy constructor :10 15
+*/
+
+// M-2 
+
+//:: - By using scope of resolution:: we can construct and create method outside the class.
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class student {
+  int rollno;
+  string name;
+  double fee;
+
+public:
+   student(int, string, double );
+   //copy constructor
+   student(student &t)
+   {
+       rollno = t.rollno;
+       name = t.name;
+       fee = t.fee;
+     
+   } 
+   void display();
+
+};
+
+//constructor
+student::student(int r,string n, double f)
+{
+  rollno = r;
+  name = n;
+  fee = f;
+}
+void student::display()
+{
+  cout << '\n' <<rollno << "\t"<< name<< "\t"<<fee;
+}
+
+int main(){
+  student s1(12, "Shovik" , 500); //normal constructor
+  student s2(s1);  //copy constructor
+  s1.display();
+  s2.display();
+  return 0;
+
+  
+}
+
+/*output
+12    Shovik 500
+12    Shovik 500
+*/
