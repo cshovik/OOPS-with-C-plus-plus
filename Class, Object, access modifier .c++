@@ -19,7 +19,7 @@ using std::string;
 //Method- Any function defined within a class is a method
 
 class Employee {
-public: //access modifier
+public: //access modifier/access specifier
     //class attributes
     string name; //members of this class is is its attribute and behaviour
     string company;
