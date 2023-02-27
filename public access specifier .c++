@@ -6,7 +6,7 @@ using namespace std;
 
 class circle{
   public:
-  double radius;
+  double radius; //public data member
 
   double compute_area(){
     return 3.12*radius*radius;
