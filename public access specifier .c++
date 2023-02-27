@@ -83,3 +83,41 @@ subtract -1
 multiply 6
 divide 2
 */
+
+
+//################################################################################################################################################################
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class room
+{
+  public:
+     double length;
+     double breadth;
+     double height;
+     void get(double le, double br , double he){
+      length = le;
+      breadth =br;
+      height= he;
+     }
+     double calculateArea()
+     {
+       return length * breadth;
+     }
+     double calculatevolume()
+     {
+      return length = breadth * height; 
+     }
+};
+int main(){
+  double l,b,h;
+  room r;
+  cin>>l>>b>>h;
+  r.get(l,b,h);
+  cout << "Area= "<<r.calculateArea()<<'\n';
+  cout<<"Volume = "<<r.calculatevolume();
+}
+
