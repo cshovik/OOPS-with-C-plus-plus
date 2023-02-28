@@ -1,5 +1,17 @@
 //polymorphism describes the concept that you can access objects of different types through the same interface.
-//Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.
+//Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us
+//to perform a single action in different ways.
+/*
+Types
+>overloading
+      1) Constructor Overloading
+      2) Method overloading
+      3) Operator overloading
+>Overriding
+      1) Method overriding
+*/
+
+//overriding
 #include <bits/stdc++.h>
 #include <iostream>
 #include<cmath>
@@ -163,3 +175,109 @@ class Dog : public Animal {
       std::cout << "The dog says: bow wow \n";
     }
 };
+
+//############################################################### Constructor Overloading ########################################################################
+//Overloaded construction essentially have same name(name of the class) and different number of arguments
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class construct
+{
+  public:
+     float area;
+     float volume;
+     construct(){
+      area = 0;
+     }
+
+     construct(int a , int b)
+     {
+      area = a*b;
+  
+     }
+
+     construct(int a , int b , int c)
+     {
+      volume = a*b*c;
+     }
+     void display()
+     {
+      cout << area <<'\n';
+      cout<< volume << '\n';
+     }
+};
+
+int main()
+{
+  //object creation
+  construct o;
+  construct o2(2,3);
+  construct o3(2,3,4);
+
+  //calling function
+  o.display();
+  o2.display();
+  o3.display();
+
+  return 0;
+
+
+}
+
+//####################################################### Method overloading ###############################################################################
+ // Creation of severel method with same name but differnt parameter
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class A
+{
+  public:
+  //function with 1 int parameter
+  void func(int x)
+  {
+    cout << "value of x " <<x <<'\n';
+  }
+  
+  //fuction with same name but 1 double parameter
+  void func(double x)
+  {
+      cout << "value of x " <<x <<'\n';
+  }
+
+  //function with same name and 2 int parameter
+  void func(int x ,int y)
+  {
+    cout<< "value of x and y is "<< x <<y <<'\n';
+  }
+
+  int func(int x,int y,int z)
+  {
+    return (x+y+z);
+  }
+  
+  
+  void func1(int x)
+  {
+    cout<<x<<'\n';
+  }
+};
+
+int main()
+{
+  A obj;
+  //1st
+  obj.func(12);
+  //2nd
+  obj.func(12.5334);
+  //3rd
+  obj.func(12,13);
+  //4th
+  cout<<obj.func(12,13,15) <<'\n';
+  obj.func1(12);
+
+  return 0;
+}
