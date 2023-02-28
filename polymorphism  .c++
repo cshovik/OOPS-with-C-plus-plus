@@ -362,3 +362,44 @@ int main()
   -n;
   n.display();
 }
+
+//######################################################## Binary operator ####################################################################################
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class complex
+{
+  private:
+    int real, imag;
+  public:
+    complex(int r=0, int i=0)
+    {
+      real = r;
+      imag = i;
+    }
+
+    //this is automatically called when '+' is usedb with between two complex object
+    //taking const thatswhy & used , if we don't take it , then we can avoid
+    complex operator + (complex const &obj)
+    {
+      complex res;
+      res.real = real + obj.real;
+      res.imag = imag + obj.imag;
+      return res;
+    }
+    void display()
+    {
+      cout<<real<< "+i "<< imag <<'\n';
+    }
+};
+
+int main()
+{
+  complex c1(10,5);
+  complex c2(2,4);
+  complex c3 =  c1 +  c2;
+  c3.display();
+}
