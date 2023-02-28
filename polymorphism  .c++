@@ -281,3 +281,84 @@ int main()
 
   return 0;
 }
+
+//########################################################### uniary operator overloading #######################################################################
+//when uniary operator overloaded through a member functioin , member function tke no explicit arguments , but if they are overloaded by friend function , 
+//takes one arguments
+
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class number
+{
+  private:
+    int x;
+  public:
+    number()
+    {
+      x=0;
+    }
+    //with parameter
+    number(int n)
+    {
+      x = n;
+    }
+
+    void operator -()//operator overloaded function
+    {
+      x = -x;
+    }
+    void display()
+    {
+      cout << "x "<< x<<'\n';
+    }
+};
+int main()
+{
+  number n(7);
+  n.display();
+  -n;
+  n.display();
+}
+
+                                 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// using scope of operator
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class number
+{
+  private:
+    int x;
+  public:
+    number()
+    {
+      x=0;
+    }
+    //with parameter
+    number(int n)
+    {
+      x = n;
+    }
+   void display();
+   void operator -();
+  
+};
+  void number::operator -()//operator overloaded function
+    {
+      x = -x;
+    }
+  void number :: display()
+    {
+      cout << "x "<< x<<'\n';
+    }
+int main()
+{
+  number n(7);
+  n.display();
+  -n;
+  n.display();
+}
