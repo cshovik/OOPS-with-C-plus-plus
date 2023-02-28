@@ -15,14 +15,15 @@ using std::string;
 
 
 
-
+//Parameterized constructor
 class Employee {
 public: 
     string Name; //default constructor    
     string Company; //default constructor   
     int Age;// default constructor
 
-    void Indtroduceyourself(){
+    void Indtroduceyourself()//function for print
+    {
       std::cout<< "Name " <<Name <<'\n';
       std::cout<< "company " << Company << '\n';
       std::cout<< "Age " << Age << '\n';
@@ -49,9 +50,8 @@ int main(){
 
 }
 
+//#####################################################  Copy Constructor ##################################################################################
 
-
-// Type -copy constructor
 
 #include <iostream>
 #include<cmath>
@@ -111,7 +111,7 @@ Copy constructor :10 15
 */
 
 // M-2 
-
+//############################################################# Using Method of resolution ####################################################################
 //:: - By using scope of resolution:: we can construct and create method outside the class.
 
 #include <iostream>
@@ -163,3 +163,100 @@ int main(){
 12    Shovik 500
 12    Shovik 500
 */
+
+//#############################################################  Destructor  #################################################################################
+
+/*
+Destructor is the revese of constructor. Destructor cannot be declared as static and const. Destructor should be declared as public section .
+*/
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int count =0;
+class test{
+  public:
+  test()
+  {
+    count++;
+    cout<< "\n No of object construct:\t"<<count;
+  }
+  ~test()
+  {
+     cout<< "\n No of object destructed:\t"<<count;
+     count--;
+  }
+};
+
+int main()
+{
+  test t,t1,t2,t3;
+  return 0;
+}
+
+/*
+output-
+No of object construct:  1
+No of object construct:  2
+No of object construct:  3
+No of object construct:  4
+No of object destructed: 4
+No of object destructed: 4
+No of object destructed: 3
+No of object destructed: 2
+No of object destructed: 1
+
+*/
+
+//############################################################## Static Comstructor ##########################################################################
+// c++ doesn't have static constructor. But a static constructor can be emaluated by using friend class or nested class
+
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+class ClassStatic
+{
+  private:
+    static char *str;
+  public:
+    void set_str(char *s)
+    {
+      str = s;
+
+    }
+    char* get_str()
+    {
+      return str;
+    }
+    //a nested class , which used as a static constructor
+    static class  classInt
+    {
+      public:
+        classInt(int size){
+          //static constructor definition
+          str = new char(size);
+          str = "How are you? ";
+        }
+    } initializer;
+
+};
+
+//static variable creation
+char* ClassStatic ::str;
+//static constructor call
+ClassStatic :: classInt  ClassStatic::initializer(20);
+
+int main()
+{
+  ClassStatic a;
+  ClassStatic b;
+  cout<< "Sring in a " <<a.get_str()<<'\n';
+  cout<< "Sring in b " <<b.get_str()<<'\n';
+
+  a.set_str("I am fine");
+  cout<< "String in a " <<a.get_str()<<'\n';
+  cout<<"String in b " << b.get_str() <<'\n';
+
+}
+
