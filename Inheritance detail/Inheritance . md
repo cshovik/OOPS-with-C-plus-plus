@@ -32,4 +32,12 @@ B is inherited from A , C is inherited from B,  D is inherited from C, D is inhe
 ####################################################################  Multiple Inheritence   #########################################################################
 
 A  ------> C <--------- B
-C Is inherited from Both A and B . One child Two parant.
+C Is inherited from Both A and B . One child many parants relationship.
+
+#################################################################### Hierarchical Inheritance #####################################################################
+
+A --------------> C -----------> H
+|                 | \
+|                 |  \                C & B is inherit from A. H,I & J inherit from C.
+\/               \/  \/               One parant many children relationship
+B                 I   j
