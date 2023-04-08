@@ -28,3 +28,8 @@ B is inheited from A
 
 A  ------> B --------> C ----------> D ------------> E
 B is inherited from A , C is inherited from B,  D is inherited from C, D is inherited from E 
+
+####################################################################  Multiple Inheritence   #########################################################################
+
+A  ------> C <--------- B
+C Is inherited from Both A and B . One child Two parant.
