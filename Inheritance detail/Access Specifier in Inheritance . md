@@ -7,3 +7,24 @@ ________________________________________________________________________________
 Public          Public(access)           protected(access)      Private(access)
 Protected       Protected(access)        Protected(access)      Private(access)
 Private         Not Acceseble            Not Acceseble          Not Acceseble
+
+#######################################################################################################################################################################
+Types Of Inheritance
+1) Single Inheritance
+2) MUltiple Inheitance
+3) Multilevel Inheritence
+4) Hierarchical Inheritance
+5) Hybrid Inheritance
+
+
+#################################################################### Single Inheritance ##############################################################################
+
+Single Inheritance:
+A ----------> B
+B is inheited from A
+
+
+####################################################################  Multilevel Inheritance  #######################################################################
+
+A  ------> B --------> C ----------> D ------------> E
+B is inherited from A , C is inherited from B,  D is inherited from C, D is inherited from E 
