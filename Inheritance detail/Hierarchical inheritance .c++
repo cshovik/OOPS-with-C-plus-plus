@@ -1,0 +1,45 @@
+//Hierarchical Inheritance
+
+#include<iostream>
+using namespace std;
+
+class A {
+
+   public:
+   void func1() {
+	    cout << "Inside function 1" << '\n';
+   }
+};
+
+//B inharit from A
+class B: public A {
+	public:
+	void func2() {
+		 cout << "Inside fuction 2 " << '\n';
+	}
+	
+};
+
+//C inharit from A
+class C: public A {
+	public:
+	void func3() {
+		 cout << "Inside fuction 3 " << '\n';
+	}
+
+};
+
+
+int main() {
+
+	A obj1;
+	obj1.func1();
+
+	B obj2;
+	obj2.func1(); // B class call A
+	obj2.func2();
+
+	C obj3;
+	obj3.func1();  // C class call A
+	obj3.func3();
+}
