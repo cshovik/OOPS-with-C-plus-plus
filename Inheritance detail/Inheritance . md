@@ -41,3 +41,12 @@ A --------------> C -----------> H
 |                 |  \                C & B is inherit from A. H,I & J inherit from C.
 \/               \/  \/               One parant many children relationship
 B                 I   j
+
+###################################################################### Hibrid Inhertance  ########################################################################
+It is combination of two or more diffrerent type of inheritance
+
+                 A       H   
+                /  \     |   
+               /    \    |            C & B is inherit from A. ---> Hierarchical Inheritance  
+              \/     \/  \/           C is inherit from A & H  ---> Multiple Inheritance      
+              B         C
