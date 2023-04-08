@@ -1,0 +1,9 @@
+Inheritence through Access Specifier
+#######################################################################################################################################################################
+
+Super Class    Sub class                Sub Class              Sub Class
+                (public)                (protected)            (Private)
+__________________________________________________________________________________
+Public          Public(access)           protected(access)      Private(access)
+Protected       Protected(access)        Protected(access)      Private(access)
+Private         Not Acceseble            Not Acceseble          Not Acceseble
