@@ -42,7 +42,7 @@ Disadvantages of Friend Functions
 2. Friend functions cannot do any run-time polymorphism in their members.
 
 
-#################################################################################### Virtual Function ##############################################################
+############################################################### Virtual Function #################################################################################
 
 A virtual function is a member function which is declared within a base class and is re-defined (overridden) by a derived class. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class’s version of the function. 
 
