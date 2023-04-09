@@ -57,3 +57,57 @@ Your number is 1+4i
 Your number is 5+8i
 Your number is 6+12i
 */
+
+
+//############################################################### Global function as friend function #############################################################
+/*The ampersand symbol (&) used in the parameter of the function declaration "friend void friendFunction(base& obj)" indicates that the parameter "obj" is a reference to an object of
+the class "base".
+
+When an object is passed by reference to a function, a reference to the original object is passed to the function rather than a copy of the object. This means 
+that any changes made to the object inside the function are made to the original object, not a copy of it.
+
+In this case, the "friendFunction" function is declared as a friend of the "base" class, which means it has access to the private and protected members of the
+"base" class. By passing an object of the "base" class by reference to the "friendFunction" function, the function can modify the object's private and protected 
+members directly.*/
+// C++ program to create a global function as a friend
+// function of some class
+
+#include <iostream>
+using namespace std;
+ 
+class base {
+private:
+    int private_variable;
+ 
+protected:
+    int protected_variable;
+ 
+public:
+    base()
+    {
+        private_variable = 10;
+        protected_variable = 99;
+    }
+     
+      // friend function declaration
+    friend void friendFunction(base& obj);
+};
+ 
+ 
+// friend function definition
+void friendFunction(base& obj)
+{
+    cout << "Private Variable: " << obj.private_variable
+         << endl;
+    cout << "Protected Variable: " << obj.protected_variable;
+}
+ 
+// driver code
+int main()
+{
+    base object1;
+    friendFunction(object1);
+ 
+    return 0;
+}
+
