@@ -5,7 +5,7 @@
 3. can be invoked without the help of any object
 4. usually contains the objects as arguments as parameter
 5. can be declared inside public or private section of the class
-6. It cannot access the member directly by their names and need object_name.number_name to accesss any member.
+6. It cannot access the member directly by their names and need object_name.member_name to accesss any member.
 */
 #include<iostream>
 using namespace std;
@@ -31,7 +31,10 @@ class complex {
 };
 
 //a friend function which return type is complex
-complex sumcomplex(complex o1, complex o2) {
+complex sumcomplex(complex o1, complex o2) // (complex-class o1,02-object)-  frnd func cannot access the member directly by their names and 
+	                                   //need object_name.member_name to accesss any member ex- o1.a
+
+{
 	complex o3;
 	o3.setnumber((o1.a + o2.a), (o1.b + o2.b));
 
@@ -95,7 +98,7 @@ public:
  
  
 // friend function definition
-void friendFunction(base& obj)
+void friendFunction(base& obj) //(base-class, obj-object create, & - call by reference)
 {
     cout << "Private Variable: " << obj.private_variable
          << endl;
