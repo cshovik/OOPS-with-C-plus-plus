@@ -62,3 +62,9 @@ A virtual function is a member function which is declared within a base class an
 Limitations of Virtual Functions:
 1. Slower: The function call takes slightly longer due to the virtual mechanism and makes it more difficult for the compiler to optimize because it does not know exactly which function is going to be called at compile time.
 2. Difficult to Debug: In a complex system, virtual functions can make it a little more difficult to figure out where a function is being called from.Compile time (early binding) VS runtime (late binding) behavior of Virtual Functions
+
+
+###################################################################### Virual function & abstract class ###########################################################
+Sometimes implementation of all function cannot be provided in a base class because we don’t know the implementation. Such a class is called abstract class.
+For example, let Shape be a base class. We cannot provide implementation of function draw() in Shape, but we know every derived class must have implementation of draw(). Similarly an Animal class doesn’t have implementation of move() (assuming that all animals move), but all animals must know how to move. We cannot create objects of abstract classes.
+A pure virtual function (or abstract function) in C++ is a virtual function for which we can have implementation, But we must override that function in the derived class
