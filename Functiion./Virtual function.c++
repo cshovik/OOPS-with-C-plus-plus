@@ -38,9 +38,13 @@ public:
 };
 
 int main() {
+	base *bptr = new derived();
+	
+	/* or
 	base *bptr;
 	derived d;
 	bptr = &d;
+	*/
     
 	// Virtual function, binded at runtime(display derived class)
 	bptr ->print();
