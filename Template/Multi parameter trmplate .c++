@@ -28,3 +28,21 @@ int main()
 
     return 0;
 }
+
+//###################################################################################################################################################
+//ex-2
+#include<iostream>
+using namespace std;
+
+template<class T, class u>
+void sub(T x, u y)
+{
+   cout<<" sub "<< x-y<<'\n';
+}
+int main()
+{
+  
+    sub<int, float>(10,20.2);
+
+    return 0;
+}
