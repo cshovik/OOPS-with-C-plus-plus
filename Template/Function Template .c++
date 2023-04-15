@@ -83,3 +83,24 @@ int main()
  
     return 0;
 }
+
+//######################################################################################################################################################
+//ex-3
+
+#include<iostream>
+using namespace std;
+
+template<class T>
+T sub(T x, T y)
+{
+    return x-y;
+}
+int main()
+{
+    int a =10, b=20;
+    long i=11 ,j=22;
+    cout<<" sub for int value "<< sub<int>(a,b)<<'\n';
+    cout<<" sub for long value "<< sub<long>(i,j)<<'\n'; 
+
+    return 0;
+}
