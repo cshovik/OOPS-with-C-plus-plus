@@ -46,3 +46,27 @@ int main()
 
     return 0;
 }
+
+//#######################################################################  Using class template #####################################################################
+#include<iostream>
+#include<stdlib.h>
+using namespace std; 
+template<class T, class U>
+class A 
+{
+public:
+  void print(T x, U y){
+    cout<<x;
+    cout<<y;
+  }
+  
+};
+ int main() {
+ A<char, char> a;
+ A<int, int> b;
+ a.print('a ','g');
+ cout<<'\n';
+ b.print(2,4);
+
+ return 0;
+}
