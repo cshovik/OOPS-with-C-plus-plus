@@ -69,6 +69,7 @@ int main(){
             float div = (float)a/b;
             if (div<0)
             throw 'e';
+            else
             cout<<div;
         }else{
             throw b;
