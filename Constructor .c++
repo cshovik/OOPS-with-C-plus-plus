@@ -111,7 +111,7 @@ Copy constructor :10 15
 */
 
 // M-2 
-//############################################################# Using Method of resolution ####################################################################
+//############################################################# Using scope of resolution ####################################################################
 //:: - By using scope of resolution:: we can construct and create method outside the class.
 
 #include <iostream>
